@@ -60,3 +60,13 @@ print(solution(a))
 
 #Other Answer
 
+def solution2(s):
+    a, b = 0, 0
+    while s != '1':
+        a += 1
+        num = s.count('1') #1의 갯수를 세서
+        b += len(s) - num #전체 길이에서 뺴주면, 사라진 0의 갯수가 나오고
+        s = bin(num)[2:] #동시에 어차피 1만 남으니까 바로 2진수로 바꾼다
+    return [a, b]
+
+
